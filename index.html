@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ARETHA Inmobiliaria</title>
+  <title>ARETHA</title>
   <link href="https://fonts.cdnfonts.com/css/vevey" rel="stylesheet">
 
   <style>
@@ -57,6 +57,7 @@
       border-bottom:1px solid var(--line);
     }
     header h1{font-size:2.2rem;color:var(--arena);letter-spacing:2px;}
+
     nav a{color:var(--marron);text-decoration:none;margin:0 18px;transition:.25s;}
     nav a:hover{color:var(--dorado);}
 
@@ -71,13 +72,9 @@
       align-items:center;justify-content:center;
       box-shadow:0 12px 24px rgba(0,0,0,.08);
     }
-    .menu-btn span{
-      width:20px;height:2px;background:var(--marron);
-      display:block;position:relative;
-    }
+    .menu-btn span{width:20px;height:2px;background:var(--marron);display:block;position:relative;}
     .menu-btn span::before,.menu-btn span::after{
-      content:"";position:absolute;left:0;width:20px;height:2px;background:var(--marron);
-      transition:.25s;
+      content:"";position:absolute;left:0;width:20px;height:2px;background:var(--marron);transition:.25s;
     }
     .menu-btn span::before{top:-6px}
     .menu-btn span::after{top:6px}
@@ -92,90 +89,43 @@
       z-index:2000;
     }
     .menu-panel{
-      position:absolute;
-      top:0;right:0;
-      width:min(320px, 88vw);
-      height:100%;
+      position:absolute;top:0;right:0;
+      width:min(320px, 88vw);height:100%;
       background:rgba(255,255,255,.92);
       border-left:1px solid rgba(0,0,0,.08);
       box-shadow:-30px 0 60px rgba(0,0,0,.18);
       transform:translateX(20px);
       transition:.25s ease;
       padding:18px 18px 24px;
-      display:flex;
-      flex-direction:column;
-      gap:14px;
+      display:flex;flex-direction:column;gap:14px;
     }
-    .menu-head{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      padding-bottom:10px;
-      border-bottom:1px solid rgba(0,0,0,.06);
-    }
-    .menu-head .brand{
-      font-size:1.9rem;
-      color:var(--arena);
-      letter-spacing:2px;
-    }
+    .menu-head{display:flex;align-items:center;justify-content:space-between;padding-bottom:10px;border-bottom:1px solid rgba(0,0,0,.06);}
+    .menu-head .brand{font-size:1.9rem;color:var(--arena);letter-spacing:2px;}
     .close-btn{
-      width:40px;height:40px;
-      border-radius:12px;
-      border:1px solid rgba(0,0,0,.08);
-      background:rgba(250,248,244,.85);
-      cursor:pointer;
-      display:grid;place-items:center;
+      width:40px;height:40px;border-radius:12px;border:1px solid rgba(0,0,0,.08);
+      background:rgba(250,248,244,.85);cursor:pointer;display:grid;place-items:center;
     }
-    .close-btn::before{
-      content:"✕";
-      font-size:18px;
-      color:var(--marron);
-      line-height:1;
-    }
-
-    .menu-links{
-      margin-top:10px;
-      display:flex;
-      flex-direction:column;
-      gap:10px;
-    }
+    .close-btn::before{content:"✕";font-size:18px;color:var(--marron);line-height:1;}
+    .menu-links{margin-top:10px;display:flex;flex-direction:column;gap:10px;}
     .menu-links a{
-      text-decoration:none;
-      color:var(--marron);
-      font-size:1.35rem;
-      padding:12px 12px;
-      border-radius:14px;
-      border:1px solid rgba(0,0,0,.06);
-      background:rgba(250,248,244,.75);
-      transition:.2s;
+      text-decoration:none;color:var(--marron);font-size:1.35rem;
+      padding:12px 12px;border-radius:14px;border:1px solid rgba(0,0,0,.06);
+      background:rgba(250,248,244,.75);transition:.2s;
     }
-    .menu-links a:hover{
-      background:rgba(226,207,162,.35);
-      border-color:rgba(214,184,124,.35);
-    }
+    .menu-links a:hover{background:rgba(226,207,162,.35);border-color:rgba(214,184,124,.35);}
     .menu-cta{
-      margin-top:auto;
-      padding-top:12px;
-      border-top:1px solid rgba(0,0,0,.06);
-      display:flex;
-      flex-direction:column;
-      gap:10px;
+      margin-top:auto;padding-top:12px;border-top:1px solid rgba(0,0,0,.06);
+      display:flex;flex-direction:column;gap:10px;
     }
     .menu-cta a{
-      text-align:center;
-      text-decoration:none;
-      font-size:1.25rem;
-      padding:12px 12px;
-      border-radius:14px;
-      background:rgba(226,207,162,.92);
-      color:var(--marron);
+      text-align:center;text-decoration:none;font-size:1.25rem;
+      padding:12px 12px;border-radius:14px;
+      background:rgba(226,207,162,.92);color:var(--marron);
       border:1px solid rgba(214,184,124,.25);
       box-shadow:0 12px 24px rgba(0,0,0,.08);
       transition:.2s;
     }
-    .menu-cta a:hover{background:rgba(214,184,124,.96);transform:translateY(-1px)}
-
-    /* estado abierto */
+    .menu-cta a:hover{background:rgba(214,184,124,.96);transform:translateY(-1px);}
     body.menu-open{overflow:hidden;}
     body.menu-open .menu-overlay{opacity:1;visibility:visible;}
     body.menu-open .menu-panel{transform:translateX(0);}
@@ -204,7 +154,7 @@
     /* ===== SECCIONES ===== */
     section{padding:100px 60px;text-align:center;}
     h2.section-title{color:var(--arena);margin-bottom:20px;letter-spacing:1px;font-size:2.2rem;}
-    .filosofia p{max-width:860px;margin:auto;font-size:1.35rem;line-height:1.75;}
+    .lead{max-width:920px;margin:0 auto;font-size:1.35rem;line-height:1.75;opacity:.95;}
 
     /* DIVIDER */
     .divider-deluxe{width:100%;height:360px;position:relative;overflow:hidden;margin:0;}
@@ -215,6 +165,59 @@
         url('https://images.adsttc.com/media/images/6514/789b/7316/322d/15a0/09ff/large_jpg/casa-178-21-arquitectos_3.jpg?1695840442')
         center/cover no-repeat;
       filter:brightness(1.05) saturate(.92);
+    }
+
+    /* ===== SERVICIOS (NUEVO) ===== */
+    .services-wrap{
+      max-width:1100px;
+      margin:30px auto 0;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:18px;
+      text-align:left;
+    }
+    .service-card{
+      background:rgba(255,255,255,.82);
+      border:1px solid rgba(0,0,0,.06);
+      border-radius:18px;
+      padding:22px 20px;
+      box-shadow:0 14px 30px rgba(0,0,0,.08);
+      transition:.25s;
+      position:relative;
+      overflow:hidden;
+    }
+    .service-card::before{
+      content:"";
+      position:absolute;inset:-2px;
+      background:radial-gradient(circle at 20% 0%, rgba(214,184,124,.18), transparent 55%);
+      pointer-events:none;
+    }
+    .service-card:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(0,0,0,.10);}
+    .service-top{
+      display:flex;align-items:center;gap:12px;margin-bottom:10px;
+    }
+    .service-icon{
+      width:44px;height:44px;border-radius:14px;
+      background:rgba(226,207,162,.38);
+      border:1px solid rgba(214,184,124,.22);
+      display:grid;place-items:center;
+      flex:0 0 auto;
+      box-shadow:0 10px 18px rgba(0,0,0,.06);
+    }
+    .service-icon svg{width:22px;height:22px;fill:var(--marron);opacity:.9}
+    .service-card h3{color:var(--arena);font-size:1.8rem;margin:0;}
+    .service-card p{font-size:1.18rem;line-height:1.55;opacity:.92;margin-top:6px}
+    .service-tags{
+      margin-top:14px;
+      display:flex;flex-wrap:wrap;gap:8px;
+    }
+    .tag{
+      font-size:1.05rem;
+      padding:8px 10px;
+      border-radius:999px;
+      border:1px solid rgba(0,0,0,.06);
+      background:rgba(250,248,244,.70);
+      opacity:.95;
     }
 
     /* CATÁLOGO */
@@ -311,7 +314,6 @@
       .divider-deluxe{height:300px}
     }
     @media(max-width:720px){
-      /* nav desktop se oculta y sale el botón menú */
       nav{display:none}
       .menu-btn{display:flex}
       .hero-content{padding-top:96px}
@@ -332,7 +334,7 @@
     <div class="line"></div>
   </div>
 
-  <!-- MENÚ MÓVIL OVERLAY -->
+  <!-- MENÚ MÓVIL -->
   <div class="menu-overlay" id="menuOverlay" aria-hidden="true">
     <div class="menu-panel" role="dialog" aria-modal="true" aria-label="Menú">
       <div class="menu-head">
@@ -343,6 +345,7 @@
       <div class="menu-links">
         <a href="#inicio" class="menu-link">Inicio</a>
         <a href="#filosofia" class="menu-link">Filosofía</a>
+        <a href="#servicios" class="menu-link">Servicios</a>
         <a href="#catalogo" class="menu-link">Catálogo</a>
         <a href="#opiniones" class="menu-link">Opiniones</a>
         <a href="#contacto" class="menu-link">Contacto</a>
@@ -362,17 +365,18 @@
       <nav>
         <a href="#inicio">Inicio</a>
         <a href="#filosofia">Filosofía</a>
+        <a href="#servicios">Servicios</a>
         <a href="#catalogo">Catálogo</a>
         <a href="#opiniones">Opiniones</a>
         <a href="#contacto">Contacto</a>
       </nav>
 
-      <!-- botón hamburguesa (solo móvil) -->
       <button class="menu-btn" id="openMenu" type="button" aria-label="Abrir menú">
         <span></span>
       </button>
     </header>
 
+    <!-- HERO -->
     <section id="inicio" class="hero">
       <video autoplay muted loop playsinline>
         <source src="video-inmobiliario.mp4" type="video/mp4">
@@ -383,17 +387,121 @@
       </div>
     </section>
 
+    <!-- FILOSOFÍA (cambio solicitado) -->
     <section id="filosofia" class="filosofia">
       <h2 class="section-title">FILOSOFÍA ARETHA</h2>
-      <p>
+      <p class="lead">
         En ARETHA creemos que el hogar no se elige, se siente.<br>
         Cada propiedad es una composición entre luz, diseño y calma.<br>
-        No vendemos espacios: curamos experiencias de vida donde el lujo y la serenidad convergen de forma natural.
+        No vendemos espacios; creamos experiencias de vida donde el lujo y la serenidad convergen de forma natural.
       </p>
     </section>
 
+    <!-- DIVIDER -->
     <div class="divider-deluxe" aria-label="Imagen arquitectónica"></div>
 
+    <!-- SERVICIOS (nuevo, más desarrollado) -->
+    <section id="servicios" class="servicios">
+      <h2 class="section-title">Servicios</h2>
+      <p class="lead">
+        Te acompañamos desde la decisión hasta la entrega. Un servicio boutique con enfoque práctico, legal y comercial,
+        para que tu operación sea fluida y segura.
+      </p>
+
+      <div class="services-wrap">
+        <div class="service-card">
+          <div class="service-top">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 3 2 12h3v8h6v-5h2v5h6v-8h3L12 3z"/></svg>
+            </div>
+            <h3>Renta</h3>
+          </div>
+          <p>
+            Búsqueda, selección y acompañamiento para conseguir la renta ideal. Filtros por zona,
+            presupuesto, amenidades y tiempos de entrega.
+          </p>
+          <div class="service-tags">
+            <span class="tag">Búsqueda & shortlist</span>
+            <span class="tag">Visitas</span>
+            <span class="tag">Validación básica</span>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-top">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M3 11h18v2H3v-2zm2-7h14v2H5V4zm0 14h14v2H5v-2z"/></svg>
+            </div>
+            <h3>Venta</h3>
+          </div>
+          <p>
+            Te ayudamos a comprar o vender con estrategia: valuación referencial, comparables,
+            y una presentación que eleva el valor percibido de la propiedad.
+          </p>
+          <div class="service-tags">
+            <span class="tag">Estrategia de precio</span>
+            <span class="tag">Comparables</span>
+            <span class="tag">Acompañamiento</span>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-top">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M4 4h16v4H4V4zm0 6h10v10H4V10zm12 0h4v10h-4V10z"/></svg>
+            </div>
+            <h3>Promoción</h3>
+          </div>
+          <p>
+            Difusión premium para renta o venta: fotografía, copy de alto impacto, ficha técnica,
+            y publicación en canales estratégicos.
+          </p>
+          <div class="service-tags">
+            <span class="tag">Foto & video</span>
+            <span class="tag">Copy premium</span>
+            <span class="tag">Publicación</span>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-top">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M2 20h20v2H2v-2zM4 2h6v6H4V2zm10 0h6v6h-6V2zM4 10h6v6H4v-6zm10 0h6v6h-6v-6z"/></svg>
+            </div>
+            <h3>Remodelación</h3>
+          </div>
+          <p>
+            Optimización estética y funcional para elevar el valor: mejoras sugeridas, coordinación
+            básica y guía por etapas para transformar sin desperdicio.
+          </p>
+          <div class="service-tags">
+            <span class="tag">Mejoras por etapa</span>
+            <span class="tag">Valor percibido</span>
+            <span class="tag">Guía práctica</span>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-top">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 .001 20.001A10 10 0 0 0 12 2zm1 5v5l4 2-.8 1.6L11 13V7h2z"/></svg>
+            </div>
+            <h3>Asesoría VR</h3>
+          </div>
+          <p>
+            Renders y recorridos en VR para visualizar una remodelación o distribución antes de invertir.
+            Ideal para propiedades “en obra” o para re-diseño interior.
+          </p>
+          <div class="service-tags">
+            <span class="tag">Renders</span>
+            <span class="tag">Recorrido VR</span>
+            <span class="tag">Propuesta visual</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CATÁLOGO -->
     <section id="catalogo" class="catalogo">
       <h2 class="section-title">Casas Disponibles</h2>
       <div class="grid">
@@ -441,6 +549,7 @@
       </div>
     </section>
 
+    <!-- OPINIONES -->
     <section id="opiniones" class="opiniones">
       <h2 class="section-title">Opiniones de Nuestros Clientes</h2>
       <div class="cards">
@@ -459,6 +568,7 @@
       </div>
     </section>
 
+    <!-- NEWSLETTER + REDES -->
     <section class="newsletter">
       <h2 class="section-title">ÚNETE AL CÍRCULO ARETHA</h2>
       <p>Recibe antes que nadie nuestras propiedades más exclusivas.</p>
@@ -481,6 +591,7 @@
       </div>
     </section>
 
+    <!-- CONTACTO -->
     <section id="contacto" class="contacto">
       <h2 class="section-title">Contáctanos</h2>
       <p style="font-size:1.25rem;opacity:.92">¿Deseas más información o agendar una visita?</p>
@@ -492,14 +603,15 @@
       </form>
     </section>
 
+    <!-- FOOTER (sin “Inmobiliaria”) -->
     <div class="footer-info">
       <div>
-        <h3>ARETHA Inmobiliaria</h3>
+        <h3>ARETHA</h3>
         <p>Lujo, confianza y diseño para quienes buscan más que un hogar.</p>
         <p>Mérida · Montebello · México</p>
       </div>
       <div>
-        <h3>Contacto Rápido</h3>
+        <h3>Contacto</h3>
         <a href="tel:+529991234567">Tel: (999) 123 4567</a>
         <a href="mailto:contacto@aretha.mx">contacto@aretha.mx</a>
         <p>Lunes a Viernes · 9:00 - 18:00</p>
@@ -513,7 +625,7 @@
     </div>
 
     <footer>
-      <p>© 2025 ARETHA Inmobiliaria · Elegancia en cada detalle</p>
+      <p>© 2025 ARETHA · Elegancia en cada detalle</p>
     </footer>
 
     <a class="btn-ws" href="https://wa.me/5210000000000" target="_blank" rel="noopener" aria-label="WhatsApp flotante">💬</a>
@@ -524,7 +636,6 @@
     window.addEventListener("load", () => {
       const loader = document.getElementById("loader");
       const body = document.body;
-
       setTimeout(() => {
         loader.classList.add("is-hidden");
         setTimeout(() => {
@@ -538,22 +649,12 @@
     const openMenuBtn = document.getElementById("openMenu");
     const closeMenuBtn = document.getElementById("closeMenu");
     const overlay = document.getElementById("menuOverlay");
-
     const openMenu = () => document.body.classList.add("menu-open");
     const closeMenu = () => document.body.classList.remove("menu-open");
-
     openMenuBtn.addEventListener("click", openMenu);
     closeMenuBtn.addEventListener("click", closeMenu);
-
-    // cerrar si toca fondo oscuro
-    overlay.addEventListener("click", (e) => {
-      if (e.target === overlay) closeMenu();
-    });
-
-    // cerrar al dar click en un link
-    document.querySelectorAll(".menu-link").forEach(a=>{
-      a.addEventListener("click", () => closeMenu());
-    });
+    overlay.addEventListener("click", (e) => { if (e.target === overlay) closeMenu(); });
+    document.querySelectorAll(".menu-link").forEach(a=> a.addEventListener("click", () => closeMenu()));
 
     // Carruseles
     document.querySelectorAll('.carousel').forEach(carousel=>{
@@ -561,13 +662,11 @@
       const left = carousel.querySelector('.left');
       const right = carousel.querySelector('.right');
       let i = 0, timer;
-
       const show = idx => imgs.forEach((im,k)=>im.classList.toggle('active', k===idx));
       const next = ()=>{ i=(i+1)%imgs.length; show(i); };
       const prev = ()=>{ i=(i-1+imgs.length)%imgs.length; show(i); };
       const start = ()=> timer=setInterval(next, 4000);
       const pause = ()=>{ clearInterval(timer); setTimeout(start, 6500); };
-
       left.addEventListener('click', ()=>{ prev(); pause(); });
       right.addEventListener('click', ()=>{ next(); pause(); });
       start();
